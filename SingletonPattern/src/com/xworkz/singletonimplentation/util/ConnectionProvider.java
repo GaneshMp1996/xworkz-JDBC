@@ -5,7 +5,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ConnectionProvider {
+	
 	private static Connection connection = null;
+	//String url = "jdbc:mysql://localhost:3306/Laptop";
+	//String userName = "root";
+	//String password = "ganeshmp";
 
 	static {
 		try {
