@@ -1,7 +1,7 @@
 package com.xworkz.singletonimplementation;
 
 public interface LaptopDao {
-	void savelaptopRecord(int id,String Brand, String Color,double Price);
+	void savelaptopRecord(int id,String brand, String color,double price);
 
 	void updateBrand(String updateBrand);
 
