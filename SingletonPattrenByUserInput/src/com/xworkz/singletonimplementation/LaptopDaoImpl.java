@@ -8,7 +8,7 @@ import com.xworkz.singletonimplementation.util.ConnectionProvider;
 
 public class LaptopDaoImpl implements LaptopDao {
 
-	public void savelaptopRecord(int id,String Brand,String Color,double Price) {
+	public void savelaptopRecord(int id,String brand,String color,double price) {
 		System.out.println("invoked savelaptopRecord");
 		String insertQuery = "INSERT into  Laptop  VALUE(?,?,?,?)";
 
@@ -18,9 +18,9 @@ public class LaptopDaoImpl implements LaptopDao {
 			PreparedStatement preparedstatement = connection.prepareStatement(insertQuery);
 			//set the values using setters
 			preparedstatement.setInt(1, id);
-			preparedstatement.setString(2,Brand);
-			preparedstatement.setString(3,Color);
-			preparedstatement.setDouble(4,Price);
+			preparedstatement.setString(2,brand);
+			preparedstatement.setString(3,color);
+			preparedstatement.setDouble(4,price);
 			preparedstatement.executeUpdate();
 			System.out.println("Laptop Record is Saved Sucessfully");
 
