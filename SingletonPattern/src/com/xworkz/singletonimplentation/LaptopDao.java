@@ -1,7 +1,4 @@
 package com.xworkz.singletonimplentation;
-import java.sql.SQLException;
-
-import com.xworkz.singletonimplentation.util.ConnectionProvider;
 
 public interface LaptopDao {
 

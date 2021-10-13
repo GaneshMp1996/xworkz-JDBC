@@ -1,10 +1,10 @@
-package com.xworkz.singletonimplentation.util;
+package com.xworkz.singletonimplementation.util;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionProvider {
-	
 	private static Connection connection = null;
 	//String url = "jdbc:mysql://localhost:3306/Laptop";
 	//String userName = "root";
@@ -46,6 +46,3 @@ public class ConnectionProvider {
 
 	}
 }
-
-
-

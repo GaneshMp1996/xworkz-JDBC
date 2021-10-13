@@ -9,7 +9,7 @@ import com.xworkz.singletonimplentation.util.ConnectionProvider;
 public class LaptopDaoImpl implements LaptopDao {
 	public void savelaptopRecord() {
 		System.out.println("invoked savelaptopRecord");
-		String insertQuery = "INSERT into  Laptop  VALUE('9','HP2','Silver','60000')";
+		String insertQuery = "INSERT into  Laptop  VALUE('10','HP2','Silver','60000')";
 
 		try {
 			Connection connection= ConnectionProvider.getConnection();
@@ -26,13 +26,13 @@ public class LaptopDaoImpl implements LaptopDao {
 
 	public void updateBrand() {
 		System.out.println("Invoked UpdateBrandRecord");
-		String updateQuery = "UPDATE Laptop set COLOR = 'Block' where ID = 1;";
+		String updateQuery = "UPDATE Laptop set Brand = 'Block' where ID = 6;";
 
 		try {
 			Connection connection= ConnectionProvider.getConnection();
 			Statement statement = connection.createStatement();
 			statement.executeUpdate(updateQuery);
-			System.out.println("Laptop Update is Saved Sucessfully");
+			System.out.println("Laptop Brand is Saved Sucessfully");
 
 		}catch (SQLException sqlException) {
 			System.out.println("Inside catch black Exception");
@@ -43,7 +43,7 @@ public class LaptopDaoImpl implements LaptopDao {
 
 	public void deleteLaptopbyId() {
 		System.out.println("invoked deleteLaptopById Record");
-		String deleteQuery = "delete from laptop where id = 2";
+		String deleteQuery = "delete from laptop where id = ?";
 
 		try {
 			Connection connection= ConnectionProvider.getConnection();
@@ -107,7 +107,7 @@ public class LaptopDaoImpl implements LaptopDao {
 
 	public void readlaptopPriceById() {
 		System.out.println("invoked readlaptopPriceById");
-		String readlaptopPriceById="select price FROM Laptop WHERE id=4";
+		String readlaptopPriceById="select price FROM Laptop WHERE id=?";
 
 		try {
 			Connection connection= ConnectionProvider.getConnection();
