@@ -6,7 +6,7 @@ import com.xworkz.singletonimplementation.LaptopDaoImpl;
 public class Laptop {
 	public static void main(String args[] ) {
 		LaptopDao laptopDao=new LaptopDaoImpl();
-		laptopDao.savelaptopRecord(8,"Acer","White",50000);
+		laptopDao.savelaptopRecord(1,"Acer","White",50000,6,"i5",true,"22",3,true);
 		System.out.println("-------------------");
 
 		laptopDao.updateBrand("Apple");
