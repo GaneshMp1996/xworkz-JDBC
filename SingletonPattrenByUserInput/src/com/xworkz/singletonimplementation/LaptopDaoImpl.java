@@ -9,9 +9,11 @@ import com.xworkz.singletonimplementation.util.ConnectionProvider;
 
 public class LaptopDaoImpl implements LaptopDao {
 
-	public void savelaptopRecord(int id, String brand, String color, double price) {
+	
+
+	public void savelaptopRecord(int id, String brand, String color, double price, int ram, String processor, boolean Is_Camera_Present, String Screen_Size, int Weight, boolean Is_Cd_Supported) {
 		System.out.println("invoked savelaptopRecord");
-		String insertQuery = "INSERT into  Laptop  VALUE(?,?,?,?)";
+		String insertQuery = "INSERT into  Laptop  VALUE(?,?,?,?,?,?,?,?,?,?)";
 
 		try {
 			Connection connection = ConnectionProvider.getConnection();
@@ -22,6 +24,13 @@ public class LaptopDaoImpl implements LaptopDao {
 			preparedstatement.setString(2, brand);
 			preparedstatement.setString(3, color);
 			preparedstatement.setDouble(4, price);
+			preparedstatement.setInt(5, ram);
+			preparedstatement.setString(6, processor);
+			preparedstatement.setBoolean(7, Is_Camera_Present);
+			preparedstatement.setString(8, Screen_Size);
+			preparedstatement.setInt(9, Weight);
+			preparedstatement.setBoolean(10, Is_Cd_Supported);
+
 			preparedstatement.executeUpdate();
 			System.out.println("Laptop Record is Saved Sucessfully");
 
@@ -185,5 +194,7 @@ public class LaptopDaoImpl implements LaptopDao {
 		}
 
 	}
+
+	
 
 }
